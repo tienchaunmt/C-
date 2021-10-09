@@ -1,13 +1,12 @@
 #include <iostream>
-#include <cmath>
 
 using namespace std;
 
 int main() {
   int n, s = 0;
   cin >> n;
-  for (int i = 1; i <= 3*n + 1; i++)
-    s += (pow(-1, i + 1))*i;
+  if (n%2 == 0) s = (3*n+2)/2;
+  else s = -(3*n+1)/2;
   cout << s;
   return 0;
 }
