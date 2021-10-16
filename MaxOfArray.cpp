@@ -10,7 +10,7 @@ int main() {
     cin >> arr[i];
   int max = arr[0];
   for (int i = 1; i < n; i++)
-    if (arr[i] > arr[i - 1]) max = arr[i];
+    if (arr[i] > max) max = arr[i];
   cout << max;
   return 0;
 }
