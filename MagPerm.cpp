@@ -23,25 +23,14 @@ int main()
   inArr(arr, n);
   outArr(arr, n);
   cout << endl;
-  bool check = true;
-  if (k > n/2 || n%2 != 0) check = false;
-  else if (k == 0) check = true;
+  if (k == 0) outArr(arr, n);
+  if (k > n/2 || n%(2*k) != 0) cout << -1 << endl;
   else
   {
-    for(int i = 0; i < n; i++)
-    {
-      if(arr[i] == i+1)
-      {
-        if(i+k>n)
-        {
-          check = false;
-          break;
-        }
+    for (int i = 0; i < n - k; i++)
+      if (arr[i] == i + 1)
         swap(arr[i], arr[i+k]);
-      }
-    }
+    outArr(arr, n);
   }
-  if(check) outArr(arr, n);
-  else cout << -1;
   return 0;
 }
