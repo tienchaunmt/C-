@@ -24,7 +24,7 @@ int main()
   outArr(arr, n);
   cout << endl;
   if (k == 0) outArr(arr, n);
-  if (k > n/2 || n%(2*k) != 0) cout << -1 << endl;
+  else if (k > n/2 || n%(2*k) != 0) cout << -1 << endl;
   else
   {
     for (int i = 0; i < n - k; i++)
